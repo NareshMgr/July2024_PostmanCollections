@@ -1,0 +1,21 @@
+{
+	"id": "7ec70674-0b3c-437d-8e68-9ca5c0c47584",
+	"name": "GoRest_QA",
+	"values": [
+		{
+			"key": "baseURL",
+			"value": "https://gorest.co.in",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "userID",
+			"value": "7074234",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2024-08-21T13:30:10.519Z",
+	"_postman_exported_using": "Postman/11.9.1-240820-0942"
+}

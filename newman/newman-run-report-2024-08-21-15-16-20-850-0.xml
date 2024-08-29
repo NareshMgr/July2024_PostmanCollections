@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="GoRest APIs-Workflow" tests="5" time="3.210">
+  <testsuite name="1- CreateAUser" id="32281db8-722c-47f2-aed3-66a09c191575" timestamp="2024-08-21T15:16:16.954Z" tests="2" failures="0" errors="0" time="1.323">
+    <testcase name="Response time is less than 5000ms" time="1.323" classname="1CreateAUser"/>
+    <testcase name="Status code is 201" time="1.323" classname="1CreateAUser"/>
+  </testsuite>
+  <testsuite name="2- GETAUser" id="de0142bb-06b6-45b3-8584-7445a857eca3" timestamp="2024-08-21T15:16:16.954Z" tests="2" failures="0" errors="0" time="0.482">
+    <testcase name="Response time is less than 5000ms" time="0.482" classname="2GetaUser"/>
+    <testcase name="Status code is 200" time="0.482" classname="2GetaUser"/>
+  </testsuite>
+  <testsuite name="3-UpdateAUser" id="eafa87ca-12ed-46de-bb87-fd968533d193" timestamp="2024-08-21T15:16:16.954Z" tests="2" failures="0" errors="0" time="0.483">
+    <testcase name="Response time is less than 5000ms" time="0.483" classname="3UpdateAUser"/>
+    <testcase name="Status code is 200" time="0.483" classname="3UpdateAUser"/>
+  </testsuite>
+  <testsuite name="4-DeleteAUser" id="2a640f38-4c01-48ff-9ea4-aa49855f9ee9" timestamp="2024-08-21T15:16:16.954Z" tests="2" failures="0" errors="0" time="0.449">
+    <testcase name="Response time is less than 5000ms" time="0.449" classname="4DeleteAUser"/>
+    <testcase name="Status code is 204" time="0.449" classname="4DeleteAUser"/>
+  </testsuite>
+  <testsuite name="5-GetAUser" id="c6b5d26b-dfcb-4fec-8d69-882d5bc2c52e" timestamp="2024-08-21T15:16:16.954Z" tests="2" failures="0" errors="0" time="0.473">
+    <testcase name="Response time is less than 5000ms" time="0.473" classname="5GetAUser"/>
+    <testcase name="Status code is 404" time="0.473" classname="5GetAUser"/>
+  </testsuite>
+</testsuites>

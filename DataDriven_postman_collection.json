@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "61b7b5aa-f91f-443b-86be-4292ed9b2754",
+		"name": "DataDriven_Newman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37773372"
+	},
+	"item": [
+		{
+			"name": "2-CreateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"user data is correct\", function () {",
+							"    ",
+							"   const response =  pm.response.json();//actual data",
+							"",
+							"   pm.expect(response.name).to.eql(pm.iterationData.get(\"name\")); ",
+							"   pm.expect(response.gender).to.eql(pm.iterationData.get(\"gender\")); ",
+							"   pm.expect(response.status).to.eql(pm.iterationData.get(\"status\")); ",
+							"",
+							"   //assignment:",
+							"   //1. check the email",
+							"   const rawBody =  pm.request.body.raw; //JSON String",
+							"    //JSON to JS Object:",
+							"    const requestBody = JSON.parse(rawBody);",
+							"    const email = requestBody.email;",
+							"    console.log(email);",
+							"    pm.expect(response.email).to.eql(email);",
+							"",
+							"   //2. check test with json ",
+							"",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 6d667dac54df6e692e6fb5ce647ba7e9131fd3664e3911ccd37778a238fd5399",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"{{name}}\",\n    \"gender\": \"{{gender}}\",\n    \"email\" : \"{{$randomEmail}}\",\n    \"status\" : \"{{status}}\"\n}\n\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl_datadriven}}/public/v2/users",
+					"host": [
+						"{{baseurl_datadriven}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
